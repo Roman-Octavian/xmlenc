@@ -1,0 +1,60 @@
+<urn:PersonSamtykkeOpret_I xmlns:urn="urn:oio:skat:hentselv:ws:1.0.1"><ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+<ds:SignedInfo>
+<ds:CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+<ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+<ds:Reference URI="">
+<ds:Transforms>
+<ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+<ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+</ds:Transforms>
+<ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+<ds:DigestValue>CxgqLJbC1kRLOwilpdTi4jFQ8mhKN3Sdvv3iJrGL0GE=</ds:DigestValue>
+</ds:Reference>
+</ds:SignedInfo>
+<ds:SignatureValue>
+Y6J7z31L6Xz+7+gtPus9bn4GPCIXSqaABwB1J7ACwJH1LbB7mNtjwzcEmZst0q4Qe/jseqLreDMu
+YuW6CgRhB8N4lrSLEosiqcDbKkMEFIHZNHaMup2Vs8WOXC7l/CMc8A7SypYnoVn1zBMlgHG5/bmW
+xFZYLk3Sqt0qzSlgaHWXt1E4sSd3e8uFO79iDCkXiosVEjP9DvgX00LyqCljD1PsWfzehHUydMvv
+1oKumUv6j3UE4cQQj92Qbkizb9jRu7IqR1bq7R59/dKFDM1I5+RtD2sp/YePJFZTzDP/K5G0J7dF
+tGO5MJjQoalwxf37O/P+MdaIpgap8n+lpLrxQHN5zAC/5XD0JLTZ7ElGCKDGqRV9K8KqplCF3QDE
+44LHtDF6BuKXH0BGBiJX1VOKdwE7nkrswxNbBAGs926EJuZsbKb5U+olRde9E7cQ9nwhlmXy45Ph
++9yVZaGCPMIY2ETHPptrUQZ/oCTU4ChR9x0MrhwMIG353jGrFjYMK7xv
+</ds:SignatureValue>
+<ds:KeyInfo>
+<ds:X509Data>
+<ds:X509Certificate>
+MIIGqzCCBN+gAwIBAgIUUVZHcBL61+j7ns+NgddEqDuxeBkwQQYJKoZIhvcNAQEKMDSgDzANBglg
+hkgBZQMEAgEFAKEcMBoGCSqGSIb3DQEBCDANBglghkgBZQMEAgEFAKIDAgEgMGsxLTArBgNVBAMM
+JERlbiBEYW5za2UgU3RhdCBPQ0VTIHVkc3RlZGVuZGUtQ0EgMTETMBEGA1UECwwKVGVzdCAtIGN0
+aTEYMBYGA1UECgwPRGVuIERhbnNrZSBTdGF0MQswCQYDVQQGEwJESzAeFw0yMzAyMjMwOTEwNTda
+Fw0yNjAyMjIwOTEwNTZaMIGcMRYwFAYDVQQDDA1lU2thdERhdGFUZXN0MTcwNQYDVQQFEy5VSTpE
+Sy1POkc6MTU4MTk3MTMtNTQ1NC00MDU1LTlkZWEtMThjNjJkZDUyMDJlMSMwIQYDVQQKDBpEWEMg
+VGVjaG5vbG9neSBEYW5tYXJrIEEvUzEXMBUGA1UEYQwOTlRSREstMTUyMzE1OTkxCzAJBgNVBAYT
+AkRLMIIBojANBgkqhkiG9w0BAQEFAAOCAY8AMIIBigKCAYEAzyDuU8jjpepFLjizkD4vQqpcPzfS
+UEpfhXVX1P0Z4lUN/EpLZpCFxWJscuxha8uVZZXZdcRB3hyKMfONfMufMGZeR0ONr1AkhQbG8cNd
+kGLtnXXLpovR17IvsGYSg56SHH9gumFcwkWySWK28edZ2d9pTxAu3hT+CCkvAei12oqMnG39o/z/
+n5a3So26T94QADyP52280v3JBZMUWlJnGzPUcBc5nfK7CwekCrfIkJPTwjW6YaL5Z6xDPGH+i5Id
+ccTOTysq9clMSFYX1eUy9npu2BGxR2gNabY9c48iEweT4CjaDItv/95KIxk/NqXDJHOcXKJg5qKq
+HCvbYiKwuO7OTpwhth/0ER04eH/iKcIYEM8S2WFjKqQxz3q+q/VYtDfmd6jwJKGkXQ/NbQg1QisA
+C1fS+QouatPwJGp/ENu3d1i16fpkj1dyXyYzMymato6NEkdMFt5DeEsVUw34ksAhz1dy+soZg4VQ
+kXtfFqjSmi73kksHZb6VztvttrC/AgMBAAGjggGrMIIBpzAMBgNVHRMBAf8EAjAAMB8GA1UdIwQY
+MBaAFH8on9lxmULidefXNXYuTQglbXZeMHsGCCsGAQUFBwEBBG8wbTBDBggrBgEFBQcwAoY3aHR0
+cDovL2NhMS5jdGktZ292LmRrL29jZXMvaXNzdWluZy8xL2NhY2VydC9pc3N1aW5nLmNlcjAmBggr
+BgEFBQcwAYYaaHR0cDovL2NhMS5jdGktZ292LmRrL29jc3AwIwYDVR0RBBwwGoEYc2thdF93ZWJf
+c3VwcG9ydEBkeGMuY29tMCEGA1UdIAQaMBgwCAYGBACPegEBMAwGCiqBUIEpAQEBAwcwOwYIKwYB
+BQUHAQMELzAtMCsGCCsGAQUFBwsCMB8GBwQAi+xJAQIwFIYSaHR0cHM6Ly91aWQuZ292LmRrMEUG
+A1UdHwQ+MDwwOqA4oDaGNGh0dHA6Ly9jYTEuY3RpLWdvdi5kay9vY2VzL2lzc3VpbmcvMS9jcmwv
+aXNzdWluZy5jcmwwHQYDVR0OBBYEFIVGKpEY4Xr1j/9qocXlBrhDS0VZMA4GA1UdDwEB/wQEAwIF
+4DBBBgkqhkiG9w0BAQowNKAPMA0GCWCGSAFlAwQCAQUAoRwwGgYJKoZIhvcNAQEIMA0GCWCGSAFl
+AwQCAQUAogMCASADggGBAJr3baOB3Z/q0p8a04u7V5geU+5BW0cBkrj+//pMBf9xrAok29W77c3m
+kcT9V/eHgnmAug6kdsBvS1kWQy0/H6nQRa7GtFCuW3w0w5wds/9aI2PMsywUP3Mor/Awn5nZePf7
+0JC/r4TqN4Z8j4kl1/SHa42VEAFhI3O3OQvCq9vGkWHjlKFdI89fnzbEPzg9ldDRfc11UoTZ21Or
+/wUtKG8JazgCkZfgQy/gnAYMZ+bWd9Ry8OXEjcQ6JSZQyWwqbhElxbQI6MNPFDAHmq9gwNGtdfoL
+jzGrcuGpQlkq+tpjxLsnArqsbuF/eAPxmXymiqPxizx6vGPsAb0KHS4U0QJ5mhWWTp8KzAwfzcUh
+L4/A8hU96pDvjwRvqeu2mecKdbx8copwU27xBZfJIl0bb5MsKs8QJxDFWopCOZ+YFe8khcL2RyJh
+PMSIl+uTu7PgH9AfdLf4fSJSjq+cCShqyNjK99VDWdwPTvEJggDvQUahehobQTMNO9I1ow6p3IjM
+/w==
+</ds:X509Certificate>
+</ds:X509Data>
+</ds:KeyInfo>
+</ds:Signature><ns:HovedOplysninger xmlns:ns="http://rep.oio.dk/skat.dk/basis/kontekst/xml/schemas/2006/09/01/"><ns:TransaktionIdentifikator>_9cff4471-ab07-4ea7-86e5-ec7308cb5d9f</ns:TransaktionIdentifikator><ns:TransaktionTid>2023-12-13T02:43:11.411+01:00</ns:TransaktionTid></ns:HovedOplysninger><urn:PersonSamtykkeValg><urn:PengeinstitutSamtykke><urn:SamtykkeInformation><ns:CVRnumberIdentifier xmlns:ns="http://rep.oio.dk/cvr.dk/xml/schemas/2005/03/22/">15231599</ns:CVRnumberIdentifier><urn1:VidereanvendelseAftaleIdentifikator xmlns:urn1="urn:oio:skat:hentselv:1.0.0">1</urn1:VidereanvendelseAftaleIdentifikator><urn1:SamtykkeAarsagKode xmlns:urn1="urn:oio:skat:hentselv:1.0.0">MEET</urn1:SamtykkeAarsagKode><urn1:SamtykkeAarsagIdentifikator xmlns:urn1="urn:oio:skat:hentselv:1.0.0">b48b3478-b50a-442f-963d-96089523ea1a</urn1:SamtykkeAarsagIdentifikator><urn1:SamtykkeKildeTekst xmlns:urn1="urn:oio:skat:hentselv:1.0.0">CSCParmGen</urn1:SamtykkeKildeTekst><urn1:RetursvarURLNavn xmlns:urn1="urn:oio:skat:hentselv:1.0.0">https://samtykke.demo.skat.dk/samtykkeklient/bankretur.do</urn1:RetursvarURLNavn></urn:SamtykkeInformation></urn:PengeinstitutSamtykke></urn:PersonSamtykkeValg></urn:PersonSamtykkeOpret_I>
