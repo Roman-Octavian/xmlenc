@@ -17,8 +17,10 @@ import javax.crypto.SecretKey;
 import javax.xml.transform.*;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
-import java.io.File;
-import java.io.FileWriter;
+import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.security.Key;
 import java.security.PrivateKey;
 import java.security.cert.Certificate;
@@ -58,6 +60,11 @@ public class XMLSamtykkeDocumentSecurity {
 // Sign the XML document
             _signature.sign(signingPrivateKey);
             System.out.print("Document signed!");
+            Transformer transformer = TransformerFactory.newInstance().newTransformer();
+            Result output = new StreamResult(new File("signed.xml"));
+            Source input = new DOMSource(xmlDocToSign);
+            transformer.setOutputProperty(OutputKeys.ENCODING, "UTF-8");
+            transformer.transform(input, output);
         } catch (Exception e) {
             System.out.print("Failed to create signature :: " + e);
             throw new Exception("Failed to create signature");
@@ -73,6 +80,7 @@ public class XMLSamtykkeDocumentSecurity {
                     Constants._TAG_SIGNATURE).item(0);
             System.out.print("Signature element found in Document");
 // Creates a XMLSignature
+            System.out.println(_sigElement);
             XMLSignature _signature = new XMLSignature(_sigElement, "");
             _cert = _signature.getKeyInfo().getX509Certificate();
 // Check Signature
@@ -136,7 +144,7 @@ public class XMLSamtykkeDocumentSecurity {
             System.out.print("Document encrypted");
             System.out.println(xmlDocToEncrypt);
             Transformer transformer = TransformerFactory.newInstance().newTransformer();
-            Result output = new StreamResult(new File("output.xml"));
+            Result output = new StreamResult(new File("encrypted.xml"));
             Source input = new DOMSource(xmlDocToEncrypt);
             transformer.setOutputProperty(OutputKeys.ENCODING, "UTF-8");
             transformer.transform(input, output);
@@ -151,6 +159,24 @@ public class XMLSamtykkeDocumentSecurity {
             System.out.println(Base64.getEncoder().encodeToString(encryptionCertificate.getPublicKey().getEncoded()));
         } catch (Exception e) {
             System.out.println(e);
+        }
+    }
+
+    public void encodeFile(String inputFile, String outputFile)
+            throws IOException {
+        Path inPath = Paths.get(inputFile);
+        Path outPath = Paths.get(outputFile);
+        try (OutputStream out = Base64.getEncoder().wrap(Files.newOutputStream(outPath))) {
+            Files.copy(inPath, out);
+        }
+    }
+
+    public void decodeFile(String encodedfilecontent, String decodedfile)
+            throws IOException {
+        Path inPath = Paths.get(encodedfilecontent);
+        Path outPath = Paths.get(decodedfile);
+        try (InputStream in = Base64.getDecoder().wrap(Files.newInputStream(inPath))) {
+            Files.copy(in, outPath);
         }
     }
 
@@ -174,6 +200,11 @@ public void decryptXMLDocument(Document xmlDocToDecrypt,
          */
         _xmlCipher.doFinal(xmlDocToDecrypt, _encryptedDataElement);
         System.out.print("Document decrypted");
+        Transformer transformer = TransformerFactory.newInstance().newTransformer();
+        Result output = new StreamResult(new File("decrypted.xml"));
+        Source input = new DOMSource(xmlDocToDecrypt);
+        transformer.setOutputProperty(OutputKeys.ENCODING, "UTF-8");
+        transformer.transform(input, output);
     } catch (Exception e) {
         System.out.print("Failed to decrypt document :: " + e);
         throw new Exception("Failed to decrypt document");
@@ -186,5 +217,4 @@ public void decryptXMLDocument(Document xmlDocToDecrypt,
         keyGenerator.init(168);
         return keyGenerator.generateKey();
     }
-
 }
